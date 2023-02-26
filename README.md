@@ -1,2 +1,2 @@
 # node-js-study
-node.js 공부하기
+node.js 교과서
