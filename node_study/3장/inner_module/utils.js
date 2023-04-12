@@ -14,6 +14,8 @@ dontUseMe(1, 2);
 const randomBytesPromise = util.promisify(crypto.randomBytes);
 // util.promisify: 콜백 패턴을 프로미스 패턴으로 바꾼다.
 // 바꿀 함수를 인수로 제공하면 된다.
+// 이처럼 바꿔놓으면 async/await 패턴까지 사용할 수 있어서 좋다.
+// 프로미스를 콜백으로 바꾸는 util.callbackify도 있지만 자주 사용되지는 않는다.
 randomBytesPromise(64)
 .then((buf) => {
     console.log(buf.toString('base64'));
